@@ -1,0 +1,12 @@
+<h1>Home Page</h1>
+<%=link_to "Create New", new_expense_path%>
+<ul>
+    <%@expenses.each do |expense|%>
+        <li><b>ID</b> :<%=expense.id%></li>
+        <li><b>Amout</b> :<%=expense.amout%></li>
+        <li><b>Description</b> :<%=expense.description%></li>
+        <%=link_to "Buy", "#"%>
+        <%=link_to "Delete", expense_path(expense), method: :delete, data: {confirm: "Are you sure.!"}%>
+        <%=link_to "Edit", edit_expense_path(expense)%>
+    <%end%>
+</ul>

@@ -1,0 +1,8 @@
+<h1>Edit informations</h1>
+<%=form_for @expense do |f|%>
+    <%=f.label :Amount%>
+    <%=f.number_field :amout%><br><br>
+    <%=f.label :Description%>
+    <%=f.text_area :description%><br><br>
+    <%=f.submit "Update"%>
+<%end%>
